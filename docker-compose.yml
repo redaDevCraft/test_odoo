@@ -1,0 +1,28 @@
+version: '3'
+services:
+  odoo_project_2:
+    image: odoo:16
+    depends_on:
+      - db_project_2
+    ports:
+      - "8070:8069"  
+    volumes:
+      - odoo-data-project-2:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+    environment:
+      - HOST=db_project_2
+      - USER=odoo
+      - PASSWORD=odoo
+
+  db_project_2:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - db-data-project-2:/var/lib/postgresql/data
+
+volumes:
+  odoo-data-project-2:
+  db-data-project-2:
