@@ -25,7 +25,11 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/actions_views.xml',
         'views/testModel_views.xml',
+        'views/pharmacie_views.xml',
+        'views/pharmacien_views.xml',
+        'views/patient_views.xml',
         'views/templates.xml',
     ],
     'installable': True,

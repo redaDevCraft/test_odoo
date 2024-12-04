@@ -1,0 +1,39 @@
+<odoo>
+
+    <menuitem id="menu_testmodel_root" name="Test Model" sequence="1" />
+
+    <record id="action_testmodel_test" model="ir.actions.act_window">
+        <field name="name">Test Model</field>
+        <field name="res_model">testmodel.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_testmodel_test" parent="menu_testmodel_root" name="Test"
+        action="action_testmodel_test" sequence="1" />
+
+
+    <record id="action_pharmacie_test" model="ir.actions.act_window">
+        <field name="name">Pharmacie model</field>
+        <field name="res_model">pharmacie.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_pharmacie_test" parent="menu_testmodel_root" name="Pharmacie"
+        action="action_pharmacie_test" sequence="2" />
+
+    <record id="action_pharmacien_test" model="ir.actions.act_window">
+        <field name="name">Pharmacien model</field>
+        <field name="res_model">pharmacien.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_pharmacien_test" parent="menu_testmodel_root" name="Pharmacien"
+        action="action_pharmacien_test" sequence="3" />
+
+    <record id="action_patient_test" model="ir.actions.act_window">
+        <field name="name">Patient model</field>
+        <field name="res_model">patient.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_patient_test" parent="menu_testmodel_root" name="Patient"
+        action="action_patient_test" sequence="2" />
+
+
+</odoo>

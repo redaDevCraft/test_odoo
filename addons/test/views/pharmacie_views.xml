@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_pharmacie_test_tree" model="ir.ui.view">
+        <field name="name">pharmacie.test.tree</field>
+        <field name="model">pharmacie.test</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom" />
+                <field name="adresse" />
+                <field name="nbr_patient" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pharmacie_test_form" model="ir.ui.view">
+        <field name="name">pharmacie.test.form</field>
+        <field name="model">pharmacie.test</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nom" />
+                        <field name="adresse" />
+                        <field name="nbr_patient" />
+
+                        <tree name='Les pharmaciens'>
+                            <field name="pharmacien_ids" />
+                        </tree>
+                        <tree name='Les pharmaciens'>
+                            <field name="test_assoc_ids" />
+                        </tree>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_pharmacien_test_tree" model="ir.ui.view">
+        <field name="name">pharmacien.test.tree</field>
+        <field name="model">pharmacien.test</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom" />
+                <field name="prenom" />
+                <field name="telephone" />
+                <field name="pharmacie_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pharmacien_test_form" model="ir.ui.view">
+        <field name="name">pharmacien.test.form</field>
+        <field name="model">pharmacien.test</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nom" />
+                        <field name="prenom" />
+                        <field name="telephone" />
+                        <field name="pharmacie_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

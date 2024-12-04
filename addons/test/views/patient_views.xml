@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_patient_test_tree" model="ir.ui.view">
+        <field name="name">patient.test.tree</field>
+        <field name="model">patient.test</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom" />
+                <field name="prenom" />
+                <field name="age" />
+                <field name="date_naissanse" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_patient_test_form" model="ir.ui.view">
+        <field name="name">patient.test.form</field>
+        <field name="model">patient.test</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nom" />
+                        <field name="prenom" />
+                        <field name="age" />
+                        <field name="date_naissanse" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

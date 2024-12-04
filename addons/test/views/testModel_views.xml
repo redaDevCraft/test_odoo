@@ -19,19 +19,24 @@
           <group>
             <field name="nom" />
             <field name="prenom" />
+
+            <group editable='top'>
+              <tree name='Class association'>
+                <field name="pharmacie_id" />
+              </tree>
+            </group>
+
+            <group editable='bottom'>
+              <tree name='Class association'>
+                <field name="patient_id" />
+              </tree>
+            </group>
+
           </group>
         </sheet>
       </form>
     </field>
   </record>
 
-  <record id="action_testmodel_test" model="ir.actions.act_window">
-    <field name="name">Test Model</field>
-    <field name="res_model">testmodel.test</field>
-    <field name="view_mode">tree,form</field>
-  </record>
 
-  <menuitem id="menu_testmodel_root" name="Test Model" sequence="10" />
-  <menuitem id="menu_testmodel_test" parent="menu_testmodel_root" name="Test"
-    action="action_testmodel_test" sequence="10" />
 </odoo>
